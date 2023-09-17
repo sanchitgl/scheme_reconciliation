@@ -72,14 +72,14 @@ def landing_page():
             if sales is not None and schemes is not None and true_up is not None:
                 writer = pd.ExcelWriter('temp/Prexo Reco Test.xlsx')
                 print("preprocessing...")
-                # sales_prexo, prexo, true_up = preprocess(sales, schemes, true_up)
+                sales_prexo, prexo, true_up = preprocess(sales, schemes, true_up)
                 # sales_clean, clean_pricing, true_up = preprocess(sales, schemes, true_up)
                 # sales_prexo.to_csv('temp/sales_prexo.csv')
                 # prexo.to_csv('temp/clean_prexo.csv')
                 # true_up.to_csv('temp/true_up_prexo.csv')
-                sales_prexo = pd.read_csv('temp/sales_prexo.csv', index_col = None) 
-                prexo = pd.read_csv('temp/clean_prexo.csv', index_col = None) 
-                true_up = pd.read_csv('temp/true_up_prexo.csv', index_col = None) 
+                # sales_prexo = pd.read_csv('temp/sales_prexo.csv', index_col = None) 
+                # prexo = pd.read_csv('temp/clean_prexo.csv', index_col = None) 
+                # true_up = pd.read_csv('temp/true_up_prexo.csv', index_col = None) 
                 # sales_clean = sales_clean.head(1000)
 
                 print("preprocessing done.")

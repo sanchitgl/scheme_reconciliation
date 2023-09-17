@@ -150,7 +150,7 @@ def landing_page():
         emp, but, empty = st.columns([2.05,1.2,1.5]) 
         with but:
             with open('temp/Other Schemes Reco Test2.xlsx', 'rb') as my_file:
-                click = st.download_button(label = 'Download in Excel', data = my_file, file_name = 'Prexo Reco Test.xlsx', 
+                click = st.download_button(label = 'Download in Excel', data = my_file, file_name = 'Other Schemes Reco Test.xlsx', 
                 mime = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
     else:
         if state.submit == True:
@@ -158,7 +158,7 @@ def landing_page():
                 emp, but, empty = st.columns([2.05,1.2,1.5]) 
                 with but:
                     with open('temp/Other Schemes Reco Test2.xlsx', 'rb') as my_file:
-                        click = st.download_button(label = 'Download in Excel', data = my_file, file_name = 'Prexo Reco Test.xlsx', 
+                        click = st.download_button(label = 'Download in Excel', data = my_file, file_name = 'Other Schemes Reco Test.xlsx', 
                         mime = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
     # except:
     #     st.error("Run failed, kindly check if the inputs are valid")
