@@ -86,14 +86,34 @@ def landing_page():
                 summary_brand = pd.DataFrame()
                 with st.empty():
                     for brand in ['NOTHING','GOOGLE']:
-                        print(brand)
+                        # print(brand)
                         df_brand = pd.DataFrame()
                         clean_extract = clean_pricing[clean_pricing['BRAND'] == brand] #VIVO and #OPPO
-                        print(clean_extract.head(10))
+                        # print(clean_extract.head(10))
                         for i in range(len(clean_extract)):
                             claim_id, fsn, df_brand, clean_extract, sales_clean = inner_loop(sales_clean, clean_extract, true_up, i, df_brand)
-                            st.write("brand: "+str(brand) + ", i: " + str(i) + ", claim_id: " + str(claim_id) + ", fsn: " + str(fsn))
-                            print(brand, i)
+                            # st.write("brand: "+str(brand) + ", i: " + str(i) + ", claim_id: " + str(claim_id) + ", fsn: " + str(fsn))
+                            col1, col2, col3, col4 = st.columns(4)
+
+                            with col1:
+                                st.write(f'<h6>{"Brand"}</h5>', unsafe_allow_html=True)
+                                st.text(str(brand))
+
+                            with col2:
+                                st.write(f'<h6>{"Number"}</h5>', unsafe_allow_html=True)
+                                # st.header('Number')
+                                st.text(str(i))
+
+                            with col3:
+                                st.write(f'<h6>{"Claim ID"}</h5>', unsafe_allow_html=True)
+                                # st.header('Claim ID')
+                                st.text(str(claim_id))
+
+                            with col4:
+                                st.write(f'<h6>{"FSN"}</h5>', unsafe_allow_html=True)
+                                # st.header('FSN')
+                                st.text(str(fsn))
+
                         df_brand = df_brand.sort_values(by=['claim_id', 'product_id'])
 
                         if len(df_brand) > 0:

@@ -97,7 +97,7 @@ def landing_page():
                                 
                                 df_claim = pd.DataFrame()
                                 for offer_id in offer_ids:
-                                    print(sheet, brand, i, claim_id, fsn, offer_id)
+                                    # print(sheet, brand, i, claim_id, fsn, offer_id)
                                     df_claim = inner_loop(df_claim, sales, true_up, claim_id, brand_support, fsn, offer_id)
                                     sheet_col, col1, col2, col3, col4, col5 = st.columns(6)
 
