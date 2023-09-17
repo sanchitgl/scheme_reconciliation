@@ -85,7 +85,7 @@ def landing_page():
                 brand_list = sorted(list(set(clean_pricing['BRAND'].to_list())))
                 summary_brand = pd.DataFrame()
                 with st.empty():
-                    for brand in ['NOTHING','GOOGLE']:
+                    for brand in brand_list:
                         # print(brand)
                         df_brand = pd.DataFrame()
                         clean_extract = clean_pricing[clean_pricing['BRAND'] == brand] #VIVO and #OPPO

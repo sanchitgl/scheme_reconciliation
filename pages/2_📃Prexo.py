@@ -87,7 +87,7 @@ def landing_page():
                 brand_list = sorted(list(set(prexo['BRAND'].to_list())))
                 summary_brand = pd.DataFrame()
                 with st.empty():
-                    for brand in ['VIVO','OPPO']:
+                    for brand in brand_list:
                         df_brand = pd.DataFrame()
                         prexo_extract = prexo[prexo['BRAND'] == brand]
                         
