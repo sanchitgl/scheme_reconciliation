@@ -99,7 +99,11 @@ def landing_page():
                                 for offer_id in offer_ids:
                                     print(sheet, brand, i, claim_id, fsn, offer_id)
                                     df_claim = inner_loop(df_claim, sales, true_up, claim_id, brand_support, fsn, offer_id)
-                                    col1, col2, col3, col4, col5 = st.columns(5)
+                                    sheet_col, col1, col2, col3, col4, col5 = st.columns(6)
+
+                                    with sheet_col:
+                                        st.write(f'<h6>{"Sheet"}</h5>', unsafe_allow_html=True)
+                                        st.text(str(sheet))
 
                                     with col1:
                                         st.write(f'<h6>{"Brand"}</h5>', unsafe_allow_html=True)
@@ -121,9 +125,9 @@ def landing_page():
                                         st.text(str(fsn))
                                     
                                     with col5:
-                                        st.write(f'<h6>{"Brand Length"}</h5>', unsafe_allow_html=True)
+                                        st.write(f'<h6>{"Offer ID"}</h5>', unsafe_allow_html=True)
                                         # st.header('Brand Length')
-                                        st.text(str(len(df_brand)))
+                                        st.text(str(offer_id))
                                 df_brand = df_brand.append(df_claim)
 
                                 scheme_extract['SOLD UNITS'].iloc[i] = df_claim['order_external_id'].count()
