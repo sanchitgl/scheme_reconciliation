@@ -1,0 +1,17 @@
+credentials:
+  usernames:
+    admin:
+      email: admin@gmail.com
+      name: Admin
+      password: '$2b$12$P4FM0ixaVZvqdSex7sOWqeRjcTNxfPof4PxyUU94L5G41.ZPyyoeq' #admin
+    amit:
+      email: amit@gmail.com
+      name: Amit
+      password: '$2b$12$/3Em5ToqNmyM1hs5h.qd1eImgnDnEAW.u5fK31rFKsj25P/zZO23S' #amit
+cookie:
+  expiry_days: 1
+  key: some_signature_key
+  name: some_cookie_name
+preauthorized:
+  emails:
+  - melsby@gmail.com
