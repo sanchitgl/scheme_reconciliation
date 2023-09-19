@@ -65,7 +65,7 @@ def page_setup():
     <style>
     /* Left sidebar */
     .css-1k0ckh2.e1fqkh3o9 {
-    margin-top: 5.2rem;
+    margin-top: 4.8rem;
     }
     /* Right drop-down */
     .css-9s5bis.edgvbvh3 {
