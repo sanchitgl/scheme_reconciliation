@@ -3,3 +3,4 @@ base="light"
 
 [server]
 maxUploadSize = 10000
+port = 80
