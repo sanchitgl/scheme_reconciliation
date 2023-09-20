@@ -13,6 +13,8 @@ import base64
 from page_config import page_setup
 from authentication.login_page import login_status
 
+st.set_page_config(layout="wide",initial_sidebar_state ="collapsed")
+
 page_setup()
 
 state = st.session_state
